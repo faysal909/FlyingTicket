@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap"
         rel="stylesheet">
     <!-- Stylesheet -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -51,13 +52,19 @@
             <div class="input-group f-class">
                 <div>
                     <label for="">First Class ($150)</label>
-                    <input class="inp-style inp-width" type="number" name="">
+                    <input id="itemCount" class="inp-style inp-width" type="number" name="">
                 </div>
-                <div class="plus-minus-btn">
+                <!-- this is button comment out section-->
+                
+                <!--div class="plus-minus-btn">
                     <p>+ -</p>
-                </div>
+                </div-->
+                <button id="iteamAdd" class="btn btn-primary"><i class="fas fa-plus"></i>+</button>
+                <button class="btn btn-danger"><i class="fas fa-minus"></i>-</button>
             </div>
-            
+            <!-- This is just for button-->
+           
+           
             <div class="input-group f-class">
                 <div>
                     <label for="">Economy ($100)</label>
@@ -103,7 +110,16 @@
             <p>Lorem ipsum dolor sit amet consectetur adipisicingelit. Provident voluptatibus quam fuga laborumalias veniam libero autem quasi maxime ullam vero nama imi dolor, architecto ab facilis eaque deserunt nobise voluptatibus quam</p>
         </div>
     </section>
-
+    <script>
+        document.getElementById("iteamAdd").addEventListener("click",function(){
+            
+            const item = document.getElementById('itemCount');
+            const ticketItem = parseInt(item.value);
+            const newCount = ticketItem + 1 ;
+            item.value = newCount;
+            
+        })
+    </script>
     <!--Thank You-->
 </body>
 
