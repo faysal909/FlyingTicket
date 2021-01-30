@@ -113,36 +113,90 @@
         </div>
     </section>
     <script>
+        // document.getElementById("iteamAdd").addEventListener("click",function(){
+            
+        //     const item = document.getElementById('itemCount');
+        //     const ticketItem = parseInt(item.value);
+        //     const newCount = ticketItem + 1 ;
+        //     item.value = newCount;
+            
+        // });
+        // document.getElementById("itemMinus").addEventListener("click" ,function(){
+            
+        //     const item = document.getElementById('itemCount')
+        //     const ticketItem = parseInt(item.value);
+        //     const newCount = ticketItem - 1;
+        //     item.value = newCount;
+        // })
+        // document.getElementById("iteamAddEco").addEventListener("click",function(){
+            
+        //     const item = document.getElementById('itemCountEconomy');
+        //     const ticketItem = parseInt(item.value);
+        //     const newCount = ticketItem + 1 ;
+        //     item.value = newCount;
+            
+        // });
+        // document.getElementById("itemMinusEco").addEventListener("click" ,function(){
+          
+        //     const item = document.getElementById('itemCountEconomy')
+        //     const ticketItem = parseInt(item.value);
+        //     const newCount = ticketItem - 1;
+        //     item.value = newCount;
+        // })
         document.getElementById("iteamAdd").addEventListener("click",function(){
             
-            const item = document.getElementById('itemCount');
-            const ticketItem = parseInt(item.value);
-            const newCount = ticketItem + 1 ;
-            item.value = newCount;
+            handleTicketChange(true);
             
         });
         document.getElementById("itemMinus").addEventListener("click" ,function(){
             
-            const item = document.getElementById('itemCount')
-            const ticketItem = parseInt(item.value);
-            const newCount = ticketItem - 1;
-            item.value = newCount;
+            handleTicketChange(false);
         })
         document.getElementById("iteamAddEco").addEventListener("click",function(){
             
-            const item = document.getElementById('itemCountEconomy');
-            const ticketItem = parseInt(item.value);
-            const newCount = ticketItem + 1 ;
-            item.value = newCount;
-            
+            // const item = document.getElementById('itemCountEconomy');
+            // const ticketItem = parseInt(item.value);
+            // const newCount = ticketItem + 1 ;
+            // item.value = newCount;
+
+             handleTicketChange(true);
         });
         document.getElementById("itemMinusEco").addEventListener("click" ,function(){
           
-            const item = document.getElementById('itemCountEconomy')
-            const ticketItem = parseInt(item.value);
-            const newCount = ticketItem - 1;
-            item.value = newCount;
+            // const item = document.getElementById('itemCountEconomy')
+            // const ticketItem = parseInt(item.value);
+            // const newCount = ticketItem - 1;
+            // item.value = newCount;
+            handleTicketChange(false);
         })
+        //  function for update ticket 
+        function handleTicketChange(isAdd){
+            const item = document.getElementById('itemCount');
+            const ticketItem = parseInt(item.value);
+            //const newCount = ticketItem + 1 ;
+            let newCount = ticketItem;
+            if(isAdd == true){
+                newCount = ticketItem + 1;
+            }
+            if(isAdd == false && ticketItem >0){
+               newCount = ticketItem -1 ; 
+            }
+            item.value = newCount;
+        }
+
+        function handleTicketChange(isAdd){
+            const item = document.getElementById('itemCountEconomy');
+            const ticketItem = parseInt(item.value);
+            //const newCount = ticketItem + 1 ;
+            let newCount = ticketItem;
+            if(isAdd == true){
+                newCount = ticketItem + 1;
+            }
+            if(isAdd == false && ticketItem >0){
+               newCount = ticketItem -1 ; 
+            }
+            item.value = newCount;
+        }
     </script>
     <!--Thank You-->
 </body>
