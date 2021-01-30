@@ -143,60 +143,113 @@
         //     const newCount = ticketItem - 1;
         //     item.value = newCount;
         // })
-        document.getElementById("iteamAdd").addEventListener("click",function(){
+        // document.getElementById("iteamAdd").addEventListener("click",function(){
             
-            handleTicketChange(true);
+        //     handleTicketChange(true);
             
-        });
-        document.getElementById("itemMinus").addEventListener("click" ,function(){
+        // });
+        // document.getElementById("itemMinus").addEventListener("click" ,function(){
             
-            handleTicketChange(false);
-        })
-        document.getElementById("iteamAddEco").addEventListener("click",function(){
+        //     handleTicketChange(false);
+        // })
+        // document.getElementById("iteamAddEco").addEventListener("click",function(){
             
-            // const item = document.getElementById('itemCountEconomy');
-            // const ticketItem = parseInt(item.value);
-            // const newCount = ticketItem + 1 ;
-            // item.value = newCount;
+        //     // const item = document.getElementById('itemCountEconomy');
+        //     // const ticketItem = parseInt(item.value);
+        //     // const newCount = ticketItem + 1 ;
+        //     // item.value = newCount;
 
-             handleTicketChange(true);
-        });
-        document.getElementById("itemMinusEco").addEventListener("click" ,function(){
+        //      handleTicketChange(true);
+        // });
+        // document.getElementById("itemMinusEco").addEventListener("click" ,function(){
           
-            // const item = document.getElementById('itemCountEconomy')
-            // const ticketItem = parseInt(item.value);
-            // const newCount = ticketItem - 1;
-            // item.value = newCount;
-            handleTicketChange(false);
-        })
-        //  function for update ticket 
-        function handleTicketChange(isAdd){
-            const item = document.getElementById('itemCount');
-            const ticketItem = parseInt(item.value);
-            //const newCount = ticketItem + 1 ;
-            let newCount = ticketItem;
-            if(isAdd == true){
-                newCount = ticketItem + 1;
-            }
-            if(isAdd == false && ticketItem >0){
-               newCount = ticketItem -1 ; 
-            }
-            item.value = newCount;
-        }
+        //     // const item = document.getElementById('itemCountEconomy')
+        //     // const ticketItem = parseInt(item.value);
+        //     // const newCount = ticketItem - 1;
+        //     // item.value = newCount;
+        //     handleTicketChange(false);
+        // })
+        // //  function for update ticket 
+        // function handleTicketChange(isAdd){
+        //     const item = document.getElementById('itemCount');
+        //     const ticketItem = parseInt(item.value);
+        //     //const newCount = ticketItem + 1 ;
+        //     let newCount = ticketItem;
+        //     if(isAdd == true){
+        //         newCount = ticketItem + 1;
+        //     }
+        //     if(isAdd == false && ticketItem >0){
+        //        newCount = ticketItem -1 ; 
+        //     }
+        //     item.value = newCount;
+        // }
 
-        function handleTicketChange(isAdd){
-            const item = document.getElementById('itemCountEconomy');
-            const ticketItem = parseInt(item.value);
-            //const newCount = ticketItem + 1 ;
-            let newCount = ticketItem;
+        // function handleTicketChange(isAdd){
+        //     const item = document.getElementById('itemCountEconomy');
+        //     const ticketItem = parseInt(item.value);
+        //     //const newCount = ticketItem + 1 ;
+        //     let newCount = ticketItem;
+        //     if(isAdd == true){
+        //         newCount = ticketItem + 1;
+        //     }
+        //     if(isAdd == false && ticketItem >0){
+        //        newCount = ticketItem -1 ; 
+        //     }
+        //     item.value = newCount;
+        // }
+
+        
+        
+        // document.getElementById("iteamAdd").addEventListener("click",function(){
+                       
+        //         handleTicket(true);
+                
+        //     });
+            document.getElementById("itemMinus").addEventListener("click" ,function(){
+                
+                handleTicket(false);
+            })
+            document.getElementById("iteamAddEco").addEventListener("click",function(){
+                               
+                handleTicketEco(true);
+                
+            });
+            document.getElementById("itemMinusEco").addEventListener("click" ,function(){
+              
+                handleTicketEco(false);
+              
+
+            function handleTicket(isAdd){
+                const item = document.getElementById('itemCount');
+                const ticketItem = parseInt(item.value);
+                //const newCount = ticketItem + 1 ;
+                let newCount = ticketItem;
             if(isAdd == true){
                 newCount = ticketItem + 1;
             }
             if(isAdd == false && ticketItem >0){
                newCount = ticketItem -1 ; 
             }
-            item.value = newCount;
-        }
+                item.value = newCount;
+
+            }
+        // another function
+
+        function handleTicketEco(isAdd){
+                const item = document.getElementById('itemCountEconomy');
+                const ticketItem = parseInt(item.value);
+                //const newCount = ticketItem + 1 ;
+                let newCount = ticketItem;
+            if(isAdd == true){
+                newCount = ticketItem + 1;
+            }
+            if(isAdd == false && ticketItem >0){
+               newCount = ticketItem -1 ; 
+            }
+                item.value = newCount;
+
+            }
+
     </script>
     <!--Thank You-->
 </body>
